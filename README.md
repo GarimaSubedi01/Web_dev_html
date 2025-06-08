@@ -6,5 +6,5 @@ Created my first webpage. Learnt basics like headings, paragraphs, and divs.
 
 ### 💻 Day 8
 
-Learnt about HTML id, <span>, semantic tags, lists (<ol>, <ul>), image basics (src, alt).
+Learnt about HTML id, <span>, semantic tags, lists, image basics.
 
