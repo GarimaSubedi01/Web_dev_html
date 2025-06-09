@@ -8,3 +8,7 @@ Created my first webpage. Learnt basics like headings, paragraphs, and divs.
 
 Learnt about HTML id, <span>, semantic tags, lists, image basics.
 
+### 💻 Day 9
+
+Learnt about anchor element with href and target attribute. Also practiced embedding videos using <video> tag wiith src, controls and fallback content.
+
