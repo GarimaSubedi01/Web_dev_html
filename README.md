@@ -12,3 +12,6 @@ Learnt about HTML id, <span>, semantic tags, lists, image basics.
 
 Learnt about anchor element with href and target attribute. Also practiced embedding videos using <video> tag wiith src, controls and fallback content.
 
+### 💻 Day 10
+
+Learnt about limking to relative pages, linking images, linking to sections within a page, using whitespace & ideation and learnt about comments.
