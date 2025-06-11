@@ -15,3 +15,7 @@ Learnt about anchor element with href and target attribute. Also practiced embed
 ### 💻 Day 10
 
 Learnt about linking to relative pages, linking images, linking to sections within a page, using whitespace & ideation and learnt about comments.
+
+### 💻 Day 11
+
+Created a fashion blog webpage as a project.
