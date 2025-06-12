@@ -19,3 +19,8 @@ Learnt about linking to relative pages, linking images, linking to sections with
 ### 💻 Day 11
 
 Created a fashion blog webpage as a project.
+
+### 💻 Day 12
+
+Learnt all about HTML tables. Created a wine festival schedule as a practice project.
+
