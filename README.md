@@ -24,3 +24,10 @@ Created a fashion blog webpage as a project.
 
 Learnt all about HTML tables. Created a wine festival schedule as a practice project.
 
+### 💻 Day 13
+
+Learnt about HTML forms. Explored text and password input types and added labels.
+
+### 💻 Day 14
+
+Completed HTML forms. Used number input, radio buttons, dropdowns, datalist, textarea and the submit button.
