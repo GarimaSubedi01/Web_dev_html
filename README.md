@@ -31,3 +31,7 @@ Learnt about HTML forms. Explored text and password input types and added labels
 ### 💻 Day 14
 
 Completed HTML forms. Used number input, radio buttons, dropdowns, datalist, textarea and the submit button.
+
+### 💻 Day 15
+
+Learnt about semantic HTML and implemented them by creating a simple web[age. With that I wrapped up HTML.
