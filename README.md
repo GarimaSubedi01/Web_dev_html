@@ -54,9 +54,11 @@ This phase helped me get more comfortable styling webpages and improving their v
 I completed my first real project: A Harry Potter inspired website
 
 🪄 Wizarding World Web
+
 A fully responsive, multi-page Harry Potter-themed website built using HTML and CSS. Inspired by the magical universe, this project showcases my ability to structure, style, and organize content while keeping user experience and design in mind.
 
 ✨ Features
+
   Home page with lore-heavy Hogwarts introduction
 
   Dedicated pages for all four houses
