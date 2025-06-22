@@ -35,3 +35,46 @@ Completed HTML forms. Used number input, radio buttons, dropdowns, datalist, tex
 ### 💻 Day 15
 
 Learnt about semantic HTML and implemented them by creating a simple web[age. With that I wrapped up HTML.
+
+### 💻 Day 16-21
+
+During these days, I focused on learning and practicing the core concepts of CSS, including:
+
+- Selectors (universal, type, class, ID, attribute, pseudo-classes)
+- The Box Model (margin, padding, border, content)
+- Display & Positioning (block, inline, inline-block, float, clear, position, z-index)
+- Typography (font-family, size, weight, line-height)
+- Colors and backgrounds (background-image, color codes, gradients, opacity)
+- Layout practice through my ongoing Harry Potter-themed website project
+
+This phase helped me get more comfortable styling webpages and improving their visual layout.
+
+### 💻 Day 22
+
+I completed my first real project: A Harry Potter inspired website
+
+🪄 Wizarding World Web
+A fully responsive, multi-page Harry Potter-themed website built using HTML and CSS. Inspired by the magical universe, this project showcases my ability to structure, style, and organize content while keeping user experience and design in mind.
+
+✨ Features
+  Home page with lore-heavy Hogwarts introduction
+
+  Dedicated pages for all four houses
+
+  Curriculum page structured using HTML tables
+
+  Login and signup forms with Hogwarts-style fonts and backgrounds
+
+  Unified theme and layout inspired by the Wizarding World aesthetics
+
+📁 Built With
+
+   HTML5
+
+   CSS3
+
+   Custom fonts and images
+
+   Semantic elements and form validation
+
+
