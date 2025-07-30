@@ -79,4 +79,11 @@ A fully responsive, multi-page Harry Potter-themed website built using HTML and 
 
    Semantic elements and form validation
 
+ ### 💻 Day 23-60
+
+   From Day 23 to 60, I focused on a blend of learning and hands-on development.
+   While some days were spent understanding core concepts like JavaScript events, DOM manipulation, and form validation, other days were dedicated to building out actual features for the        quiz website.
+  
+   This phase led to the completion of all main pages, Countries, Nepal, IT, and Sports — along with smooth navigation, score display, and form logic. It wasn’t just about writing code          every day, but staying consistent, learning deeply, and applying those learnings creatively.
+
 
