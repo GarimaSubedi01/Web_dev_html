@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Countries Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: white;
+    }
+    .quiz-container {
+      background-color: whitesmoke;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid black;  
+
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h3 {
+      margin-bottom: 10px;
+    }
+    .question label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    button {
+      background: gray;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+     a{
+      float: left;
+      background: whitesmoke;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      
+    }
+    a:hover{
+      color: blue ;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class = "quiz-container">
+    <h1>Nepal Quiz</h1>
+  <form id="quizForm">
+  <div class="question">
+    <h3>1. What is the capital city of Nepal?</h3>
+<label><input type="radio" name="q1" value="Kathmandu" /> Kathmandu</label>
+<label><input type="radio" name="q1" value="Pokhara" /> Pokhara</label>
+<label><input type="radio" name="q1" value="Lalitpur" /> Lalitpur</label>
+
+<div class="question">
+  <h3>2. What is the national flower of Nepal?</h3>
+  <label><input type="radio" name="q2" value="Rhododendron" /> Rhododendron</label>
+  <label><input type="radio" name="q2" value="Lotus" /> Lotus</label>
+  <label><input type="radio" name="q2" value="Sunflower" /> Sunflower</label>
+</div>
+
+<div class="question">
+  <h3>3. Who is the current Prime Minister of Nepal? (as of 2025)</h3>
+  <label><input type="radio" name="q3" value="Pushpa Kamal Dahal" /> Pushpa Kamal Dahal</label>
+  <label><input type="radio" name="q3" value="Sher Bahadur Deuba" /> Sher Bahadur Deuba</label>
+  <label><input type="radio" name="q3" value="KP Sharma Oli" /> KP Sharma Oli</label>
+</div>
+
+<button type="submit">Submit</button>
+<div id="next"><a href="sports.html">Next</a></div>
+</form>
+
+<div id="result"></div>
+</div>
+
+<script>
+  document.getElementById("quizForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const answers = {
+      q1: "Kathmandu",
+      q2: "Rhododendron",
+      q3: "Pushpa Kamal Dahal"
+    };
+
+      let score = 0;
+
+      for (let question in answers) {
+        const selected = document.querySelector(`input[name="${question}"]:checked`);
+        if (selected && selected.value === answers[question]) {
+          score++;
+        }
+      }
+
+      document.getElementById("result").textContent = `You scored ${score} `;
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Countries Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: white;
+    }
+    .quiz-container {
+      background-color: whitesmoke;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid black;  
+
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h3 {
+      margin-bottom: 10px;
+    }
+    .question label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    button {
+      background: gray;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+     a{
+      float: left;
+      background: whitesmoke;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      
+    }
+    a:hover{
+      color: blue ;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class = "quiz-container">
+    <h1>IT Quiz</h1>
+  <form id="quizForm">
+  <div class="question">
+    <h3>1. What does CPU stand for?</h3>
+    <label><input type="radio" name="q1" value="Central Processing Unit" /> Central Processing Unit</label>
+    <label><input type="radio" name="q1" value="Control Program Utility" /> Control Program Utility</label>
+    <label><input type="radio" name="q1" value="Computer Processing Unit" /> Computer Processing Unit</label>
+  </div>
+
+  <div class="question">
+    <h3>2. What is the main function of an operating system?</h3>
+    <label><input type="radio" name="q2" value="Manage hardware and software resources" /> Manage hardware and software resources</label>
+    <label><input type="radio" name="q2" value="Edit documents" /> Edit documents</label>
+    <label><input type="radio" name="q2" value="Run antivirus software" /> Run antivirus software</label>
+  </div>
+
+  <div class="question">
+    <h3>3. Which of these is a programming language?</h3>
+    <label><input type="radio" name="q3" value="Python" /> Python</label>
+    <label><input type="radio" name="q3" value="Photoshop" /> Photoshop</label>
+    <label><input type="radio" name="q3" value="Excel" /> Excel</label>
+  </div>
+
+  <button type="submit">Submit</button>
+  <div id="next"><a href="nepal.html">Next</a></div>
+</form>
+
+<div id="result"></div>
+</div>
+
+<script>
+  document.getElementById("quizForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const answers = {
+      q1: "Central Processing Unit",
+      q2: "Manage hardware and software resources",
+      q3: "Python"
+    };
+
+      let score = 0;
+
+      for (let question in answers) {
+        const selected = document.querySelector(`input[name="${question}"]:checked`);
+        if (selected && selected.value === answers[question]) {
+          score++;
+        }
+      }
+
+      document.getElementById("result").textContent = `You scored ${score} `;
+    });
+  </script>
+
+</body>
+</html>

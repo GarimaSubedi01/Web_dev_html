@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Practice</title>
+  <style>
+    .highlight {
+      color: white;
+      background-color: #0077ff;
+      padding: 5px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="main-heading">Hello DOM!</h1>
+  <p class="info">This is a paragraph.</p>
+  <p class="info">Another paragraph to practice on.</p>
+  <button id="changeBtn">Change Things</button>
+  <button id="addBtn">Add New Paragraph</button>
+  <ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+
+  <script>
+    // Selecting elements
+    const heading = document.getElementById('main-heading');
+    const paragraphs = document.getElementsByClassName('info');
+    const list = document.querySelector('#list');
+
+    // Event to change text, style, and attributes
+    document.getElementById('changeBtn').addEventListener('click', function() {
+      // Change textContent
+      heading.textContent = 'DOM Updated!';
+
+      // Style manipulation
+      heading.style.color = 'green';
+      heading.style.fontSize = '30px';
+
+      // Add class to first paragraph
+      paragraphs[0].classList.add('highlight');
+
+      // Attribute manipulation
+      heading.setAttribute('title', 'This heading has been changed!');
+      console.log('Has title attribute?', heading.hasAttribute('title'));
+      console.log('Title attribute value:', heading.getAttribute('title'));
+    });
+
+    // Event to create and append new element
+    document.getElementById('addBtn').addEventListener('click', function() {
+      const newPara = document.createElement('p');
+      newPara.textContent = 'New paragraph added!';
+      document.body.appendChild(newPara);
+    });
+
+    // Traversing example: log all child nodes of list
+    console.log('Children of list:', list.children);
+  </script>
+</body>
+</html>

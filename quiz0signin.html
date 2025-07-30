@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In</title>
+  <style>
+    body{
+        text-align: center;
+    }
+    label{
+        display: block;
+        padding: 5px;
+    }
+    input{
+        padding: 5px;
+    }
+    button{
+        padding: 5px;
+        background-color: gray;
+    }
+    button:hover{
+        background-color: silver;
+    }
+    #signForm{
+        background-color: whitesmoke;
+        margin: 0%;
+        width: 500px;
+        margin-left: 30%;
+        border-bottom: 1px solid gray;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        
+    }
+    h2{
+        width: 500px;
+        margin: 0%;
+        background-color: whitesmoke;
+        margin-left: 30%;
+        margin-top: 25px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-top: 1px solid gray;
+         border-left: 1px solid gray;
+        border-right: 1px solid gray;
+    }
+    
+  </style>
+</head>
+<body>
+  <h2>Sign In to test your General Knowledge</h2>
+  <form id="signForm" >
+    <label>Username: </label>
+
+      <input type="text" id="username"><br><br>
+      <small id="userError"></small>
+    
+    <label>Email: </label>
+      <input type="email" id="email"><br><br>
+      <small id="emailError"></small>
+    
+
+    <label>Password: </label>
+      <input type="password" id="password"><br><br>
+      <small id="passError"></small>
+    
+
+    <label>Confirm Password: </label>
+      <input type="password" id="confirmPassword"><br><br>
+      <small id="confirmError"></small>
+    
+
+    <button type="submit">Sign In</button><br><br>
+  </form>
+
+  <script>
+    const form = document.getElementById('signForm');
+    const username = document.getElementById('username');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirmPassword');
+    const userError = document.getElementById('userError');
+    const emailError = document.getElementById('emailError');
+    const passError = document.getElementById('passError');
+    const confirmError = document.getElementById('confirmError');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      let valid = true;
+
+      if (username.value.trim() === "") {
+        userError.textContent = "Username is required";
+        valid = false;
+      } else {
+        userError.textContent = "";
+      }
+
+      if (email.value.trim() === "") {
+        emailError.textContent = "Email is required";
+        valid = false;
+      } else {
+        emailError.textContent = "";
+      }
+
+      const passRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      if (!passRegex.test(password.value)) {
+        passError.textContent = "Min 8 chars, upper, lower, number, special char";
+        valid = false;
+      } else {
+        passError.textContent = "";
+      }
+
+      if (confirmPassword.value !== password.value || confirmPassword.value === "") {
+        confirmError.textContent = "Passwords do not match";
+        valid = false;
+      } else {
+        confirmError.textContent = "";
+      }
+
+      if (valid) {
+        window.location.href = "gkhome.html";
+
+      }
+    });
+  </script>
+</body>
+</html>

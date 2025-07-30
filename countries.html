@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Countries Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: white;
+    }
+    .quiz-container {
+      background-color: whitesmoke;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid black;  
+
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h3 {
+      margin-bottom: 10px;
+    }
+    .question label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    button{
+      background: gray;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    a{
+      float: left;
+      background: whitesmoke;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      
+    }
+    a:hover{
+      color: blue ;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quiz-container">
+    <h1>Countries Quiz</h1>
+
+    <form id="quizForm">
+      <div class="question">
+        <h3>1. What is the capital of Australia?</h3>
+        <label><input type="radio" name="q1" value="Canberra" /> Canberra</label>
+        <label><input type="radio" name="q1" value="Sydney" /> Sydney</label>
+        <label><input type="radio" name="q1" value="Melbourne" /> Melbourne</label>
+      </div>
+
+      <div class="question">
+        <h3>2. Which country has the most population?</h3>
+        <label><input type="radio" name="q2" value="India" /> India</label>
+        <label><input type="radio" name="q2" value="China" /> China</label>
+        <label><input type="radio" name="q2" value="USA" /> USA</label>
+      </div>
+
+      <div class="question">
+        <h3>3. Which country is known as the Land of the Rising Sun?</h3>
+        <label><input type="radio" name="q3" value="South Korea" /> South Korea</label>
+        <label><input type="radio" name="q3" value="Japan" /> Japan</label>
+        <label><input type="radio" name="q3" value="Thailand" /> Thailand</label>
+      </div>
+
+      <button type="submit">Submit</button>
+      <div id="next"><a href="it.html">Next</a></div>
+    </form>
+
+    <div id="result"></div>
+    
+  </div>
+
+  <script>
+    document.getElementById("quizForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const answers = {
+        q1: "Canberra",
+        q2: "China",
+        q3: "Japan"
+      };
+
+      let score = 0;
+
+      for (let question in answers) {
+        const selected = document.querySelector(`input[name="${question}"]:checked`);
+        if (selected && selected.value === answers[question]) {
+          score++;
+        }
+      }
+
+      document.getElementById("result").textContent = `You scored ${score} `;
+    });
+  </script>
+
+</body>
+</html>
